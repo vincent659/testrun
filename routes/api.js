@@ -315,7 +315,7 @@ router.post('/tweets', async (req, res) => {
             } else {
               T.get(
                 'search/tweets',
-                { q: `${keyWord} since:${mostRecentTime}`, count: 100 },
+                { q: `${keyWord} since:${mostRecentTime}`, count: 10000 },
                 function (err, data, response) {
                   const responseJSON = data;
 
